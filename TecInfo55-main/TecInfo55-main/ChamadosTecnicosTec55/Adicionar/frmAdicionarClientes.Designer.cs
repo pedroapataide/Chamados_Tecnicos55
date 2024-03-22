@@ -63,7 +63,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 141);
+            this.label3.Location = new System.Drawing.Point(12, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 2;
@@ -72,7 +72,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 192);
+            this.label4.Location = new System.Drawing.Point(12, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             // txbProfissao
             // 
-            this.txbProfissao.Location = new System.Drawing.Point(12, 157);
+            this.txbProfissao.Location = new System.Drawing.Point(12, 144);
             this.txbProfissao.Name = "txbProfissao";
             this.txbProfissao.Size = new System.Drawing.Size(376, 20);
             this.txbProfissao.TabIndex = 2;
@@ -95,7 +95,7 @@
             // txbSetor
             // 
             this.txbSetor.BackColor = System.Drawing.SystemColors.Window;
-            this.txbSetor.Location = new System.Drawing.Point(12, 208);
+            this.txbSetor.Location = new System.Drawing.Point(12, 183);
             this.txbSetor.Name = "txbSetor";
             this.txbSetor.Size = new System.Drawing.Size(376, 20);
             this.txbSetor.TabIndex = 3;
@@ -103,7 +103,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 254);
+            this.label5.Location = new System.Drawing.Point(9, 206);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 13);
             this.label5.TabIndex = 7;
@@ -112,10 +112,10 @@
             // txbObs
             // 
             this.txbObs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbObs.Location = new System.Drawing.Point(12, 270);
+            this.txbObs.Location = new System.Drawing.Point(12, 222);
             this.txbObs.Multiline = true;
             this.txbObs.Name = "txbObs";
-            this.txbObs.Size = new System.Drawing.Size(376, 112);
+            this.txbObs.Size = new System.Drawing.Size(376, 187);
             this.txbObs.TabIndex = 4;
             // 
             // btnSalvar
@@ -156,6 +156,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmAdicionarClientes";
             this.Text = "Adicionar Cliente";
+            this.Load += new System.EventHandler(this.frmAdicionarClientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

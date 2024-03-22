@@ -11,31 +11,38 @@ using System.Windows.Forms;
 
 namespace ChamadosTecnicosTec55.Adicionar
 {
-    public partial class frmAdicionarClientes : Form
+    public partial class frmAdicionarTecnicos : Form
     {
         //Chama a conexão
         string _conexao = ChamadosTecnicosTec55.Properties.Settings.Default.Conexao;
 
-        public frmAdicionarClientes()
+        public frmAdicionarTecnicos()
         {
             InitializeComponent();
+  
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             txbNome.Clear();
-            txbProfissao.Clear();
-            txbSetor.Clear();
+            txbEspecialidade.Clear();
+            txbEmail.Clear();
+            txbSenha.Clear();
             txbObs.Clear();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            // Chmar o objeto cliente
-            Clientes clientes = new Clientes();
-            ClientesDao Clientedao = new ClientesDao(_conexao);
+            
+        }
 
-            if(string.IsNullOrWhiteSpace(txbNome.Text) || string.IsNullOrWhiteSpace(txbProfissao.Text) || string.IsNullOrWhiteSpace(txbSetor.Text)  || string.IsNullOrWhiteSpace(txbObs.Text))
+        private void btnSalvar_Click_1(object sender, EventArgs e)
+        {
+            // Chmar o objeto cliente
+            Tecnicos tecnicos = new Tecnicos();
+            Tecnicodao tecnicodao = new Tecnicodao(_conexao);
+
+            if (string.IsNullOrWhiteSpace(txbNome.Text) || string.IsNullOrWhiteSpace(txbEspecialidade.Text) || string.IsNullOrWhiteSpace(txbEmail.Text) || string.IsNullOrWhiteSpace(txbSenha.Text) || string.IsNullOrWhiteSpace(txbObs.Text))
             {
                 MessageBox.Show("CADE OS DADOS????");
             }
@@ -46,28 +53,24 @@ namespace ChamadosTecnicosTec55.Adicionar
                 try
                 {
                     // Preenche o objeto cliente
-                    clientes.Nome = txbNome.Text;
-                    clientes.Profissao = txbProfissao.Text;
-                    clientes.Setor = txbSetor.Text;
-                    clientes.Obs = txbObs.Text;
+                    tecnicos.Nome = txbNome.Text;
+                    tecnicos.Especialidade = txbEspecialidade.Text;
+                    tecnicos.Email = txbEmail.Text;
+                    tecnicos.senha = txbSenha.Text;
+                    tecnicos.Obs = txbObs.Text;
 
                     // Chamar o DAO para incluir o cliente 
-                    Clientedao.IncluiCliente(clientes);
-
+                    tecnicodao.IncluiTecnico(tecnicos);
                     MessageBox.Show("Cadastrado com sucesso!");
                     this.Close();
                 }
 
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("ERRO  ao cadastrar", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
-        private void frmAdicionarClientes_Load(object sender, EventArgs e)
-        {
-
-        }
     }
-}
+ }

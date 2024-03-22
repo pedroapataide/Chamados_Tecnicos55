@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Chamados.cs" />
     <Compile Include="ClientesDao.cs" />
+    <Compile Include="Tecnicodao.cs" />
     <Compile Include="Tecnicos.cs" />
     <Compile Include="Clientes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

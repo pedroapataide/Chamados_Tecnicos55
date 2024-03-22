@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adicionar\frmAdicionarTecnicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAdicionarTecnicos.Designer.cs">
+      <DependentUpon>frmAdicionarTecnicos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Adicionar\frmAdicionarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Adicionar\frmAdicionarTecnicos.resx">
+      <DependentUpon>frmAdicionarTecnicos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Adicionar\frmAdicionarClientes.resx">
       <DependentUpon>frmAdicionarClientes.cs</DependentUpon>
     </EmbeddedResource>

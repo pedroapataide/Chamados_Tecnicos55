@@ -31,11 +31,6 @@ namespace ChamadosTecnicosTec55.Adicionar
             txbObs.Clear();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnSalvar_Click_1(object sender, EventArgs e)
         {
             // Chmar o objeto cliente

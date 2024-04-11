@@ -56,5 +56,28 @@ namespace ChamadosTecnicosTec55.Alterar
         {
             ListarCliente();
         }
+
+        private void btn_alterar_Click(object sender, EventArgs e)
+        {
+            // Verifica se alguma linha está selecionada no DGV
+            if (dgv_gerirClientes.SelectedRows.Count > 0)
+            {
+                // obtém o código do cliente na linah selecionada
+                int codigo = Convert.ToInt32(dgv_gerirClientes.CurrentRow.Cells[0].Value);
+
+                var frmAlterarCliente = new frmAlterarCliente(codigo);
+                frmAlterarCliente.ShowDialog();
+
+                // apos a tela fechar listar os clientes cadastrados
+                ListarCliente();
+            }
+
+            else
+            {
+                // Exibe uma mensagens de Aviso se nenhuma estiver selecionada 
+                MessageBox.Show("Selecione um registro para alteração", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
+
